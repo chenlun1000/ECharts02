@@ -1,0 +1,32 @@
+<!-- 成交记录 -->
+<view class="distribution doneLog">
+  <view class="title">
+    <view class="title-left">成交记录</view>
+  </view>
+  <!-- 日期选择 -->
+  <view class="chooseDate">
+    <view class="startDate">
+      <picker mode="date" value="{{date01}}" bindchange="bindDateChange01">
+        <view class="picker">
+          {{date01}}
+        </view>
+        <image src="../../images/goDone.png"></image>
+      </picker>
+
+    </view>
+    <view class="dateText">至</view>
+    <view class="endDate">
+      <picker mode="date" value="{{date02}}" bindchange="bindDateChange02">
+        <view class="picker">
+          {{date02}}
+        </view>
+        <image src="../../images/goDone.png"></image>
+      </picker>
+
+    </view>
+    <view bindtap="getChartData" class="searchBtn">查询</view>
+  </view>
+  <view class="container">
+    <ec-canvas id="mychart" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
